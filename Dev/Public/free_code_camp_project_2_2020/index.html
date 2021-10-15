@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Surver Form</title>
+  </head>
+  <body>
+    <header>
+      <h1 id="title">
+        Freecodecamp Estates
+      </h1>
+      <p id="description">Thank you for taking time to participate in this survey.<br />
+      your opinion is priceless to us</p>
+    </header>
+    <main>
+      <form id="survey-form">
+        <div class="form-group">
+          <label id="name-label" for="name">Name</label>
+            <input
+              type="text" name="name" id="name"
+              class="form-control" placeholder="Enter your name" required/>
+        </div>
+        <div class="form-group">
+          <label id="email-label" for="email">Email</label>
+          <input type="email" name="email" id="email"class="form-control"
+          placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label id="number-label" for="number">Age
+            <span class="clue">(optional)</span>
+          </label>
+          <input type="number" name="age"min="18" max="100" id="number"
+          class="form-control" placeholder="Age" required />
+        </div>
+        <div class="form-group">
+          <p>Which option describes your current Academic/Work status?</p>
+        <select name="status" id="dropdown" class="form-control" required>
+          <option disabled selected value>Select current role</option>
+          <option value="student">Student</option>
+          <option value="job">Full Time Job</option>
+          <option value="learner">Full Time Learner</option>
+          <option value="preferNo">Prefer not to say</option>
+          <option value="other">Other</option>
+        </select>
+        </div>
+        <div class="form-group">
+          <p>Would you recommend our Estate Housing Services?</p>
+          <label>
+            <input name="user-recommend" value="definitely" type="radio"
+          class="input-radio" checked/>Definitely
+          </label>
+          <label>
+            <input type="radio" name="user-recommend"
+            value="maybe" class="input-radio"/>Maybe
+          </label>
+          <label>
+            <input name="user-recommend" value="not-sure"type="radio"
+             class="input-radio"/>Not sure
+          </label>
+        </div>
+
+    <div class="form-group">
+      <p>
+        What is your add-on offer?
+      </p>
+      <select id="most-like" name="mostLike" class="form-control" required>
+        <option disabled selected value>Select an option</option>
+        <option value="free-cleanup">Free-cleanup</option>
+        <option value="free-transport">Free-transport</option>
+        <option value="percentage-off">10% Off</option>
+        <option value="Customer-service">24hrs Customer Service</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <p>What would you suggest we improve<span class="clue">(check all that apply)
+      </span></p>
+      <label>
+        <input type="checkbox" name="prefer" value="Customer-support"
+        class="input-checkbox"/>Customer support
+      </label>
+      <label>
+      <input type="checkbox" name="prefer" value="Promotions"
+      class="input-checkbox"/>Promotions
+      </label>
+      <label>
+      <input type="checkbox" name="prefer" value="consultation"
+      class="input-checkbox"/>Consultation
+      </label>
+      <label>
+      <input type="checkbox" name="prefer" value="delivery"
+      class="input-checkbox"/>Delivery
+      </label>
+      <label>
+      <input type="checkbox" name="prefer" value="internet-services"
+      class="input-checkbox"/>Internet services
+      </label>
+      <label>
+      <input type="checkbox" name="prefer" value="renovation"
+      class="input-checkbox"/>Renovation
+      </label>
+      <label>
+      <input type="checkbox" name="prefer" value="agents"
+      class="input-checkbox"/>Agents
+      </label>
+    </div>
+    <div class="form-group">
+      <p>Additional comments and suggestions</p>
+      <textarea id="comments" class="input-textarea" name="comment" rows="8" cols="80"
+      placeholder="enter your comments or additional suggestions" ></textarea>
+    </div>
+    <div class="form-group" style="text-align:center">
+      <button type="submit"  id="submit" class="submit-buttom">Submit</button>
+
+    </div>
+      </form>
+    </main>
+  </body>
+</html>
