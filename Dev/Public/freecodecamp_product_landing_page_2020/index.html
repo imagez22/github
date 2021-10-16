@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Surver Form</title>
+  </head>
+
+    <body>
+      <header id="header">
+      <div class="navigation-bar">
+        <div id="navigation-container">
+          <div class="image-link">
+          <a href="www.freecodecamp.org">
+            <img  id="header-img" src="https://i.postimg.cc/xTjc3WF0/picture.png" alt="Sample real estate logo" style="width:42px;height:42px;border:0">
+          </a>
+          </div>
+          <nav id="nav-bar">
+            <ul>
+              <li ><a href="#footer">Home</a></li>
+              <li ><a class="nav-link" href="#video">Projects</a></li>
+              <li ><a class="nav-link" href="#footer">About Us</a></li>
+              <li ><a class="nav-link" href="#footer">Services</a></li>
+              <li ><a class="nav-link" href="#name">Get in Touch</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main>
+        <p id="form-caption"><strong>FreeCodeCamp Estate Services </strong><br />
+          <span>Estate Services Made Just For You. Help Us Contact You</span></p>
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+          <div class="form-group">
+            <label id="name-label" for="name">Name</label>
+              <input
+                type="text" name="name" id="name"
+                class="form-control" placeholder="Enter your name" required/>
+          </div>
+          <div class="form-group">
+            <label id="email-label" for="email">Email</label>
+            <input type="email" name="email" id="email"class="form-control"
+            placeholder="Enter your email" required>
+          </div>
+          <div class="form-group" style="text-align:center">
+            <input type="submit"  id="submit" class="submit-buttom"></input>
+          </div>
+        </form>
+        <center>
+        <div id="text"style="font-size:20px; ">
+          <h1>Premium Materials</h1>
+          <p>Our houses use the best material which is sourced locally.
+             This will increase the longevity of your purchase.</p>
+          <h1>Fremium Transport</h1>
+          <p>We will transport you, your family and all your belonging's to your new appartment.
+                This will decrease the stress involved in moving.</p>
+          <h1>Quality Assurance</h1>
+          <p> For every purchase you make, we will ensure there are no
+            damages or faults and we will check and test the pitch of your instrument.
+          </p>
+        </div>
+        </center>
+        <div>
+          <center>
+          <iframe id="video" width="950" height="534" src="https://www.youtube.com/embed/7Qivx2om0MM"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+           allowfullscreen></iframe>
+           </center>
+        </div>
+      </main>
+      <footer id="footer"class="footer" style="position: absolute;text-decoration:none;
+      width: 100%; background-color: green; color: yellow;
+      text-align: center; font-size:20px;                                      ">
+        @Copyright <a id="footlink" style="text-decoration:none; color:red" href="https://www.Freecodecamp.org /"> Freecodecamp </a> 2020- All Right Reserved.</a>
+      </footer>
+    </body>
+  </html>
