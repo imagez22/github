@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    FCC Responsive Web Design Projects - Build a Technical Documentation Page
+  </title>
+  <link rel="stylesheet" href="styles.css" type="text/css" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav id="navbar">
+    <header>Javascript Documentation</header>
+
+    <div id="link-container">
+      <a class="nav-link" href="#Introduction">Introduction</a>
+      <a class="nav-link" href="#What_you_should_already_know">What you should already know</a>
+      <a class="nav-link" href="#JavaScript_and_Java">JavaScript and Java</a>
+      <a class="nav-link" href="#Hello_world">Hello world</a>
+      <a class="nav-link" href="#Variables">Variables</a>
+      <a class="nav-link" href="#Constants">Constants</a>
+      <a class="nav-link" href="#Data_types">Data types</a>
+      <a class="nav-link" href="#Decision_structure"> Decision structure </a>
+      <a class="nav-link" href="#Loops">Loops</a>
+      <a class="nav-link" href="#Functions">Functions</a>
+      <a class="nav-link" href="#References">References</a>
+    </div>
+  </nav>
+
+  <!-- Document -->
+  <main id="main-doc">
+    <!-- Introduction section -->
+    <section id="Introduction" class="main-section">
+      <header>
+        <h1>Introduction</h1>
+      </header>
+      <article>
+        <p>JavaScript is the world's most popular programming language.</p>
+        <p>JavaScript is the programming language of the Web.</p>
+        <p>JavaScript is easy to learn.</p>
+
+        <h2>Why Study JavaScript?</h2>
+        <p>
+          JavaScript is one of the <strong>3 languages</strong> all web
+          developers <strong><u>must</u></strong> learn:
+        </p>
+        <ol>
+          <li><strong>HTML</strong> to define the content of web pages</li>
+          <li><strong>CSS</strong> to specify the layout of web pages</li>
+          <li>
+            <strong>JavaScript</strong> to program the behavior of web pages
+          </li>
+        </ol>
+      </article>
+    </section>
+
+    <!-- What you should already know section -->
+    <section id="What_you_should_already_know" class="main-section">
+      <header>
+        <h1>What you should already know</h1>
+      </header>
+      <article>
+        <p>This guide assumes you have the following basic background:</p>
+
+        <ul>
+          <li>
+            A general understanding of the <strong>Internet</strong> and the
+            <strong>World Wide Web (WWW)</strong>.
+          </li>
+          <li>
+            Good working knowledge of
+            <strong>HyperText Markup Language (HTML) </strong> .
+          </li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- JavaScript and Java section -->
+    <section id="JavaScript_and_Java" class="main-section">
+      <header>
+        <h1>JavaScript and Java</h1>
+      </header>
+
+      <article>
+        <p>
+          JavaScript and Java are similar in some ways but fundamentally
+          different in some others. The JavaScript language resembles Java but
+          does not have Java's static typing and strong type checking.
+          JavaScript follows most Java expression syntax, naming conventions
+          and basic control-flow constructs which was the reason why it was
+          renamed from LiveScript to JavaScript.
+        </p>
+
+        <p>
+          In contrast to Java's compile-time system of classes built by
+          declarations, JavaScript supports a runtime system based on a small
+          number of data types representing numeric, Boolean, and string
+          values. JavaScript has a prototype-based object model instead of the
+          more common class-based object model. The prototype-based model
+          provides dynamic inheritance; that is, what is inherited can vary
+          for individual objects. JavaScript also supports functions without
+          any special declarative requirements. Functions can be properties of
+          objects, executing as loosely typed methods.
+        </p>
+
+        <p>
+          JavaScript is a very free-form language compared to Java. You do not
+          have to declare all variables, classes, and methods. You do not have
+          to be concerned with whether methods are public, private, or
+          protected, and you do not have to implement interfaces. Variables,
+          parameters, and function return types are not explicitly typed.
+        </p>
+
+        <p>
+          Java is a class-based programming language designed for fast
+          execution and type safety. Type safety means, for instance, that you
+          can't cast a Java integer into an object reference or access private
+          memory by corrupting Java bytecodes. Java's class-based model means
+          that programs consist exclusively of classes and their methods.
+          Java's class inheritance and strong typing generally require tightly
+          coupled object hierarchies. These requirements make Java programming
+          more complex than JavaScript programming.
+        </p>
+
+        <p>
+          In contrast, JavaScript descends in spirit from a line of smaller,
+          dynamically typed languages such as HyperTalk and dBASE. These
+          scripting languages offer programming tools to a much wider audience
+          because of their easier syntax, specialized built-in functionality,
+          and minimal requirements for object creation.
+        </p>
+      </article>
+    </section>
+
+    <section id="Hello_world" class="main-section">
+      <header>
+        <h1>Hello world</h1>
+      </header>
+      <article>
+        <h2>console.log()</h2>
+        <code> console.log('Hello, World!'); </code>
+
+        <h2>alert()</h2>
+        <code> alert('Hello, World!'); </code>
+
+        <h2>document.write()</h2>
+        <code> document.write('Hello, World!'); </code>
+      </article>
+    </section>
+
+    <!-- Variables section -->
+    <section id="Variables" class="main-section">
+      <header>
+        <h1>Variables</h1>
+      </header>
+
+      <article>
+        <p>JavaScript variables are containers for storing data values.</p>
+        <p>
+          In this example, <strong>x</strong>, <strong>y</strong>, and
+          <strong>z</strong>, are variables, declared with the
+          <strong>var</strong> keyword:
+        </p>
+        <code> var x = 5; var y = 6; var z = x + y; </code>
+        <p>From the example above, you can expect:</p>
+        <ul>
+          <li>x stores the value 5</li>
+          <li>y stores the value 6</li>
+          <li>z stores the value 11</li>
+        </ul>
+
+        <h2>Using <u>let</u> and <u>const</u> (ES6)</h2>
+        <p>
+          Before 2015, using the <strong>var</strong> keyword was the only way
+          to declare a JavaScript variable.
+        </p>
+        <p>
+          The 2015 version of JavaScript (ES6) allows the use of the
+          <strong>const</strong> keyword to define a variable that cannot be
+          reassigned, and the <strong>let</strong> keyword to define a
+          variable with restricted scope.
+        </p>
+
+        <p>
+          Because it is a little complicated to describe the difference
+          between these keywords, and because they are not supported in older
+          browsers, the first part of this tutorial will most often use
+          <strong>var</strong>.
+        </p>
+
+        <h2>Much Like Algebra</h2>
+        <p>
+          In this example, <strong>price1</strong>, <strong>price2</strong>,
+          and <strong>total</strong>, are variables:
+        </p>
+        <code>
+          var price1 = 5; var price2 = 6; var total = price1 + price2;
+        </code>
+        <p>
+          In programming, just like in algebra, we use variables (like price1)
+          to hold values.
+        </p>
+        <p>
+          In programming, just like in algebra, we use variables in
+          expressions (total = price1 + price2).
+        </p>
+        <p>From the example above, you can calculate the total to be 11.</p>
+        <p>
+          <u>
+            JavaScript variables are containers for storing data values.
+          </u>
+        </p>
+      </article>
+    </section>
+
+    <!-- Constants section -->
+    <section id="Constants" class="main-section">
+      <header>
+        <h1>Constants</h1>
+      </header>
+
+      <article>
+        <p>
+          ES2015 introduced two important new JavaScript keywords:
+          <strong>let</strong> and <strong>const</strong>.
+        </p>
+        <p>
+          Variables defined with <strong>const</strong> behave like let
+          variables, except they cannot be reassigned:
+        </p>
+        <code>
+          const PI = 3.141592653589793; PI = 3.14; // This will give an error
+          PI = PI + 10; // This will also give an error
+        </code>
+
+        <h2>Assigned when Declared</h2>
+        <p>
+          JavaScript const variables must be assigned a value when they are
+          declared:
+        </p>
+        <code> const PI = 3.14159265359; </code>
+      </article>
+    </section>
+
+    <!-- Data Types section -->
+    <section id="Data_types" class="main-section">
+      <header>
+        <h1>Data types</h1>
+      </header>
+
+      <article>
+        <p>
+          JavaScript variables can hold many <strong>data types</strong>:
+          numbers, strings, objects and more:
+        </p>
+        <code>
+          var length = 16; // Number var lastName = "Johnson"; // String var x
+          = {firstName:"John", lastName:"Doe"}; // Object
+        </code>
+        <p>
+          <u>
+            When adding a number and a string, JavaScript will treat the
+            number as a string.
+          </u>
+        </p>
+      </article>
+    </section>
+
+    <!-- Decision structure section -->
+    <section id="Decision_structure" class="main-section">
+      <header>
+        <h1>Decision structure</h1>
+      </header>
+
+      <article>
+        <p>
+          Conditional statements are used to perform different actions based
+          on different conditions.
+        </p>
+
+        <h2>Conditional Statements</h2>
+        <p>
+          Very often when you write code, you want to perform different
+          actions for different decisions.
+        </p>
+        <p>You can use conditional statements in your code to do this.</p>
+        <p>In JavaScript we have the following conditional statements:</p>
+        <ul>
+          <li>
+            Use <strong>if</strong> to specify a block of code to be executed,
+            if a specified condition is true
+          </li>
+          <li>
+            Use <strong>else</strong> to specify a block of code to be
+            executed, if the same condition is false
+          </li>
+          <li>
+            Use <strong>else if</strong> to specify a new condition to test,
+            if the first condition is false
+          </li>
+          <li>
+            Use <strong>switch</strong> to specify many alternative blocks of
+            code to be executed
+          </li>
+        </ul>
+
+        <h2>The if Statement</h2>
+        <p>
+          Use the <strong>if</strong> statement to specify a block of
+          JavaScript code to be executed if a condition is true.
+        </p>
+        <h3>Syntax</h3>
+        <code>
+          if (condition) { &nbsp;&nbsp;// block of code to be executed if the
+          condition is true }
+        </code>
+        <p>
+          <u>
+            Note that <strong>if</strong> is in lowercase letters. Uppercase
+            letters (If or IF) will generate a JavaScript error.
+          </u>
+        </p>
+
+        <h2>The else Statement</h2>
+        <p>
+          Use the <strong>else</strong> statement to specify a block of code
+          to be executed if the condition is false.
+        </p>
+        <h3>Syntax</h3>
+        <code>
+          if (condition) { &nbsp;&nbsp;// block of code to be executed if the
+          condition is true } else { &nbsp;&nbsp;// block of code to be
+          executed if the condition is false }
+        </code>
+
+        <h2>The else if Statement</h2>
+        <p>
+          Use the <strong>else if</strong> statement to specify a new
+          condition if the first condition is false.
+        </p>
+        <h3>Syntax</h3>
+        <code>
+          if (condition1) { &nbsp;&nbsp;// block of code to be executed if
+          condition1 is true } else if (condition2) { &nbsp;&nbsp;// block of
+          code to be executed if the condition1 is false and condition2 is
+          true } else { &nbsp;&nbsp;// block of code to be executed if the
+          condition1 is false and condition2 is false }
+        </code>
+
+        <h2>The switch statement</h2>
+        <p>
+          Use the <strong>switch</strong> statement to select one of many code
+          blocks to be executed.
+        </p>
+        <h3>Syntax</h3>
+        <code>
+          switch(expression) { &nbsp;&nbsp;case x: &nbsp;&nbsp;&nbsp;&nbsp;//
+          code block &nbsp;&nbsp;&nbsp;&nbsp;break; &nbsp;&nbsp;case y:
+          &nbsp;&nbsp;&nbsp;&nbsp;// code block &nbsp;&nbsp;&nbsp;&nbsp;break;
+          &nbsp;&nbsp;default: &nbsp;&nbsp;&nbsp;&nbsp;// code block }
+        </code>
+        <p>This is how it works:</p>
+        <ul>
+          <li>The switch expression is evaluated once.</li>
+          <li>
+            The value of the expression is compared with the values of each
+            case.
+          </li>
+          <li>
+            If there is a match, the associated block of code is executed.
+          </li>
+          <li>If there is no match, the default code block is executed.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Loops section -->
+    <section id="Loops" class="main-section">
+      <header>
+        <h1>Loops</h1>
+      </header>
+
+      <article>
+        <h2>The While Loop</h2>
+        <p>
+          The <strong>while</strong> loop loops through a block of code as
+          long as a specified condition is true.
+        </p>
+        <h3>Syntax</h3>
+        <code>
+          while (condition) { &nbsp;&nbsp;// code block to be executed }
+        </code>
+
+        <h2>The For Loop</h2>
+        <p>
+          The <strong>for</strong> loop loops through a block of code a number
+          of times.
+        </p>
+        <h3>Syntax</h3>
+        <code>
+          for (statement 1; statement 2; statement 3) { &nbsp;&nbsp;// code
+          block to be executed }
+        </code>
+        <p>
+          <strong>Statement 1</strong> is executed (one time) before the
+          execution of the code block.
+        </p>
+        <p>
+          <strong>Statement 2</strong> defines the condition for executing the
+          code block.
+        </p>
+        <p>
+          <strong>Statement 3</strong> is executed (every time) after the code
+          block has been executed.
+        </p>
+
+        <h2>The For/In Loop</h2>
+        <p>
+          The JavaScript <strong>for/in</strong> statement loops through the
+          properties of an Object
+        </p>
+        <h3>Syntax</h3>
+        <code>
+          for (key in object) { &nbsp;&nbsp;// code block to be executed }
+        </code>
+
+        <h2>The For/Of Loop</h2>
+        <p>
+          The JavaScript <strong>for/of</strong> statement loops through the
+          values of an iterable object.
+        </p>
+        <h3>Syntax</h3>
+        <code>
+          for (variable of iterable) { &nbsp;&nbsp;// code block to be
+          executed }
+        </code>
+        <p>
+          <strong>variable</strong> - For every iteration the value of the
+          next property is assigned to the variable. Variable can be declared
+          with <strong>const</strong>, <strong>let</strong>, or
+          <strong>var</strong>.
+        </p>
+        <p>
+          <strong>iterable</strong> - An object that has iterable properties.
+        </p>
+
+        <h2>The Do While Loop</h2>
+        <p>
+          The <strong>do/while</strong> loop is a variant of the while loop.
+          This loop will execute the code block once, before checking if the
+          condition is true, then it will repeat the loop as long as the
+          condition is true.
+        </p>
+        <h3>Syntax</h3>
+        <code>
+          do { &nbsp;&nbsp;// code block to be executed } while (condition);
+        </code>
+      </article>
+    </section>
+
+    <!-- Functions section -->
+    <section id="Functions" class="main-section">
+      <header>
+        <h1>Functions</h1>
+      </header>
+
+      <article>
+        <p>
+          A JavaScript function is a block of code designed to perform a
+          particular task.
+        </p>
+
+        <p>
+          A JavaScript function is executed when "something" invokes it (calls
+          it).
+        </p>
+
+        <h2>Example</h2>
+        <code>
+          function myFunction(p1, p2) { &nbsp;&nbsp;return p1 * p2; // The
+          function returns the product of p1 and p2 }
+        </code>
+
+        <h2>JavaScript Function Syntax</h2>
+        <code>
+          function name(parameter1, parameter2, parameter3) { &nbsp;&nbsp;//
+          code to be executed }
+        </code>
+
+        <h2>Function Invocation</h2>
+        <p>
+          The code inside the function will execute when "something"
+          <strong>invokes</strong> (calls) the function:
+        </p>
+        <ul>
+          <li>When an event occurs (when a user clicks a button)</li>
+          <li>When it is invoked (called) from JavaScript code</li>
+          <li>Automatically (self invoked)</li>
+        </ul>
+
+        <h2>Function Return</h2>
+        <p>
+          When JavaScript reaches a <strong>return</strong> statement, the
+          function will stop executing.
+        </p>
+        <p>
+          If the function was invoked from a statement, JavaScript will
+          "return" to execute the code after the invoking statement.
+        </p>
+        <p>
+          Functions often compute a <strong>return value</strong>. The return
+          value is "returned" back to the "caller".
+        </p>
+      </article>
+    </section>
+
+    <!-- References section -->
+    <section id="References" class="main-section">
+      <header>
+        <h1>References</h1>
+      </header>
+
+      <article>
+        <ul>
+          <li>
+            <a href="https://www.w3schools.com/js/default.asp" target="_blank">W3Schools</a>
+          </li>
+          <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">MDN</a>
+          </li>
+          <li>
+            <a href="https://www.programiz.com/javascript/examples/hello-world" target="_blank">
+              Programiz
+            </a>
+          </li>
+        </ul>
+      </article>
+    </section>
+  </main>
+</body>
+
+</html>
