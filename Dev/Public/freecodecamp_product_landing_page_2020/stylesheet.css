@@ -1,21 +1,23 @@
 body {
   margin: 0;
   padding: 0;
-  font-size:10px;
+  font-size: 10px;
 }
-.image-link{
-  position:absolute;
-  padding:5px 5px 5px 5px;
-  margin:10px 0px 10px 0px;
-  background-color:green;
-  border-radius:10px;
+
+.image-link {
+  position: absolute;
+  padding: 5px 5px 5px 5px;
+  margin: 10px 0px 10px 0px;
+  background-color: green;
+  border-radius: 10px;
 }
 }
+
 .logo {
   float: left;
 }
-/* ~~ Top Navigation Bar ~~ */
 
+/* ~~ Top Navigation Bar ~~ */
 #navigation-container {
   width: 1200px;
   margin: 0 auto;
@@ -26,24 +28,26 @@ body {
   background-color: orange;
   height: 70px;
   width: 100%;
-  text-align:center;
-  position:fixed;
-  top:0%;
+  text-align: center;
+  position: fixed;
+  top: 0%;
 }
-.navigation-bar img{
-float:left;
+
+.navigation-bar img {
+  float: left;
 }
+
 .navigation-bar ul {
   padding: 0px;
   margin: 0px;
   text-align: center;
-  display:inline-block;
-  vertical-align:top;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .navigation-bar li {
-  font-weight:bold;
-  font-size:12px;
+  font-weight: bold;
+  font-size: 12px;
   list-style-type: none;
   padding: 8px 8px 8px 8px;
   height: 24px;
@@ -53,8 +57,9 @@ float:left;
   background-color: green;
   border-radius: 4px;
 }
-.navigation-bar li:hover{
-background-color:red;
+
+.navigation-bar li:hover {
+  background-color: red;
 }
 
 .navigation-bar li a {
@@ -68,26 +73,30 @@ background-color:red;
 }
 
 #menu {
-  float: right;}
-main{
-  background-color:white;
+  float: right;
 }
-#form-caption{
-font-family: Helvetica;
-  font-size:38px;
-  text-align: center;
-  background-color:inherit;
-  color:green;
-  padding-top:35px;
-}
-span{
-  display:flex;
-     justify-content:space-around;
-  font-size:20px;
-  padding-top:20px;
 
+main {
+  background-color: white;
+}
+
+#form-caption {
+  font-family: Helvetica;
+  font-size: 38px;
+  text-align: center;
+  background-color: inherit;
+  color: green;
+  padding-top: 35px;
+}
+
+span {
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+  padding-top: 20px;
 }
 }
+
 label {
   display: flex;
   align-items: center;
@@ -97,7 +106,7 @@ label {
 
 input,
 button,
-{
+  {
   margin: 0;
   font-family: inherit;
   font-size: inherit;
@@ -119,20 +128,19 @@ button {
 }
 
 /* form */
-
 form {
   background: orange;
   padding: 2.5rem 0.625rem;
   border-radius: 0.25rem;
-  margin:0px 500px 50px 500px;
-  font-size:20px;
+  margin: 0px 500px 50px 500px;
+  font-size: 20px;
 }
+
 @media (min-width: 480px) {
   form {
     padding: 2.5rem;
   }
 }
-
 
 .form-group {
   margin: 0 auto 1.25rem auto;
@@ -158,9 +166,8 @@ form {
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
-
-#submit{
-  font-weight:bold;
+#submit {
+  font-weight: bold;
   font-size: 20px;
   display: block;
   width: 105%;
@@ -169,7 +176,7 @@ form {
   color: inherit;
   border-radius: 5px;
   cursor: pointer;
-  iframe{
-    align-self:center;
+
+  iframe {
+    align-self: center;
   }
- 
