@@ -1,13 +1,13 @@
-/*===== GOOGLE FONTS =====*/
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
 
-/*===== VARIABLES CSS =====*/
+
 :root{
     --header-height: 3rem;
     --font-medium: 500;
 }
 
-/*===== Colores =====*/
+
 :root{
     --first-color: #5361FF;
     --white-color: #FAFAFF;
@@ -15,7 +15,7 @@
     --text-color: #697477;
 }
 
-/*===== Fuente y tipografia =====*/
+
 :root{
     --body-font: 'Montserrat', sans-serif;
     --big-font-size: 6.25rem;
@@ -32,7 +32,6 @@
     }
 }
 
-/*===== Margenes =====*/
 :root{
     --mb-1: .5rem;
     --mb-2: 1rem;
@@ -40,12 +39,10 @@
     --mb-4: 2rem;
 }
 
-/*===== z index =====*/
 :root{
     --z-fixed: 100;
 }
 
-/*===== BASE =====*/
 *,::before,::after{
     box-sizing: border-box;
 }
@@ -78,7 +75,7 @@ img{
     display: block;
 }
 
-/*===== CLASS CSS ===== */
+
 .section{
     padding: 3rem 0;
 }
@@ -101,7 +98,7 @@ img{
     background-color: var(--first-color);
 }
 
-/*===== LAYOUT =====*/
+
 .bd-grid{
     max-width: 1024px;
     display: grid;
@@ -120,7 +117,7 @@ img{
     background-color: var(--first-color);
 }
 
-/*===== NAV =====*/
+
 .nav{
     height: var(--header-height);
     display: flex;
@@ -159,12 +156,11 @@ img{
     cursor: pointer;
 }
 
-/*=== Show menu ===*/
 .show{
     right: 0;
 }
 
-/*Active menu*/
+
 .active::after{
     position: absolute;
     content: "";
@@ -175,7 +171,6 @@ img{
     background-color: var(--first-color);
 }
 
-/*===== HOME =====*/
 .home{
     position: relative;
     background-color: var(--first-color);
@@ -210,7 +205,7 @@ img{
     width: 295px;
 }
 
-/* ===== ABOUT =====*/
+
 .about__container{
     justify-items: center;
     row-gap: 2rem;
@@ -223,7 +218,6 @@ img{
     width: 120px;
     height: 120px;
     background-color: var(--first-color);
-    border-radius: 50%;
     overflow: hidden;
 }
 .about__img img{
@@ -249,7 +243,7 @@ img{
     color: var(--first-color);
 }
 
-/* ===== SKILLS =====*/
+
 .skills__container{
     row-gap: 2rem;
 }
@@ -274,7 +268,7 @@ img{
     border-radius: .5rem;
 }
 
-/* ===== PORTFOLIO =====*/
+
 .portfolio{
     background-color: var(--white-color);
 }
@@ -310,7 +304,6 @@ img{
     color: var(--dark-color);
 }
 
-/* ===== CONTACT =====*/
 .contact__container{
     row-gap: 2rem;
 }
@@ -349,7 +342,7 @@ img{
     cursor: pointer;
 }
 
-/* ===== FOOTER=====*/
+
 .footer{
     background-color: var(--dark-color);
 }
@@ -375,8 +368,7 @@ img{
     color: var(--first-color);
 }
 
-/* ===== MEDIA QUERIES =====*/
-/* For small devices */
+
 @media screen and (max-width: 320px) {
   .home__img {
     width: 230px;
@@ -477,7 +469,7 @@ img{
     }
 }
 
-/* For tall screens on mobiles y desktop*/
+/* For tall screens on mobiles desktop*/
 @media screen and (min-height: 721px) {
     .home__container {
         height: 640px;
