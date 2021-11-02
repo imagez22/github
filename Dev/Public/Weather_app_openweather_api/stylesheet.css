@@ -27,7 +27,7 @@ body{
 input[type="text"]{
   height:50px;
   width:600px;
-  background: grey;
+  background: lightgoldenrodyellow;
   font-family:"Nunito", sans-serif;
   font-weight:bold;
   font-size: 20px;
@@ -39,7 +39,7 @@ input[type="text"]{
 input[type="Submit"]{
   height:50px;
   width:100px;
-  background: grey;
+  background: lightgoldenrodyellow;
   font-family:"Nunito", sans-serif;
   font-weight:bold;
   font-size: 20px;
