@@ -46,6 +46,10 @@ input[type="Submit"]{
   border: none;
   border-radius: 2px;
 }
+input[type="Submit"]:hover{
+  background-color:red;
+  cursor:pointer;
+}
 .display{
   text-align:center;
   color: lime;
