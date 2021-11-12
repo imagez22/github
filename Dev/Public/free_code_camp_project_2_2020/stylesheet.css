@@ -26,6 +26,7 @@ body {
 /* mobile friendly alternative to using background-attachment: fixed */
 body::before {
   content: '';
+  margin: 50px 200px 50px 200px;
   position: fixed;
   top: 0;
   left: 0;
