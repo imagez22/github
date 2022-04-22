@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="quote-box">
+      <div class="quote-text">
+        <i class="fa fa-quote-left"></i>
+        <span id="text">Two roads diverged in a wood, and I—I took the one less traveled by, And that has made all the difference.</span>
+        <i class="fa fa-quote-right"></i>
+      </div>
+      <div><em class="quote-author">Robert Frost</em>
+        <span id="author"></span>
+      </div>
+      <div class="buttons">
+        <a id="tweet-quote" title="post this quote on twitter" target="_top" type="button" class="btn btn-primary"><i class="fa fa-twitter"></i></a>
+        <a id="facebook-quote" title="post this quote on facebook" target="_blank" type="button" class="btn btn-primary"><i class="fa fa-facebook"></i></a>
+        <a id="linkedin-quote" title="post this quote on linkedin" target="_blank" type="button" class="btn btn-primary"><i class="fa fa-linkedin"></i></a>
+        <button type="button" class="btn btn-primary" id="new-quote">new quote</button>
+      </div>
+    </div>
+  </div>
+  <div id="footer">by <a href="https://codepen.io/imagez01">imagez01</a></div>
+
+  <style>
+    @import url('https //fonts.googleapis.com/css family=poppins');
+
+    * {
+      font-family: "Catamaran";
+    }
+
+    body {
+      background-color: red;
+      margin: 20px 20px 20px 20px;
+      font-size: 30px;
+    }
+
+    .wrapper {
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      text-align: justify;
+      word-break: break-all;
+      margin: 200px 400px 100px 250px;
+      border: 2px solid black;
+      border-radius: 10px;
+      border-width: thick;
+      border-style: dotted dotted dotted dotted;
+      padding: 10px 10px 10px 10px;
+      background: yellow;
+    }
+
+    #new-quote {
+      margin-left: 500px;
+    }
+  </style>
+
+  <script>
+    let quotes = [
+      ["Whatever the mind of man can conceive and believe, it can achieve.", "Napoleon Hill"],
+      ["Strive not to be a success, but rather to be of value.", "Albert Einstein"],
+      ["Two roads diverged in a wood, and I—I took the one less traveled by, And that has made all the difference.", "Robert Frost"],
+      ["I attribute my success to this: I never gave or took any excuse.", "Florence Nightingale"],
+      [" You miss 100% of the shots you don’t take.", "Wayne Gretzky"],
+      [" I’ve missed more than 9000 shots in my career. I’ve lost almost 300 games. 26 times I’ve been trusted to take the game winning shot and missed. I’ve failed over and over and over again in my life. And that is why I succeed.",
+        "Michael Jordan"
+      ],
+      ["Life is what happens to you while you’re busy making other plans. ", "John Lennon"]
+    ];
+
+    // function randomize(arr) {
+    //   return arr[Math.floor(Math.random() * arr.length)];
+    // };
+    let quote = quotes[Math.floor(Math.random() * quotes.length)];
+
+    $(document).ready(function() {
+      $("#new-quote").click(function() {
+        $("#text").text(quote[0]);
+        $(".quote-author").text(quote[1]);
+
+      });
+    });
+  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+@import url('https //fonts.googleapis.com/css family=poppins');
+*{
+  font-family: "Catamaran";
+}
+
+body {
+  background-color: red;
+  margin: 20px 20px 20px 20px;
+  font-size:30px;
+  transition: 0.5s;
+  transition-timing-function: ease-in;
+  background-image: linear-gradient(to right bottom, #ed4264a8, #ffedbca8);
+}
+.wrapper{
+  align-items:center;
+  align-content:center;
+  justify-content: center;
+  text-align: justify;
+  word-break: break-all;
+  margin: 200px 400px 200px 400px;
+  border: 2px solid black;
+  border-radius: 10px;
+  border-width: thick;
+  border-style:dotted dotted dotted dotted;
+  padding:10px 10px 10px 10px;
+  background: yellow;
+}
+ #new-quote{
+  margin:auto;
+  position: 30px auto; ;
+}
+#footer{
+  text-align: center;
+  margin: 20px;
+}
+/*
+*{
+  font-family: "Catamaran";
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+  background-color: red;
+  margin: 20px 20px 20px 20px;
+  font-size:30px;
+    min-height:100vh;
+    transition: 0.5s;
+    transition-timing-function: ease-in;
+    background-image: linear-gradient(to right bottom, #ed4264a8, #ffedbca8);
+  }
+
+  #quote-box{
+    padding:3rem;
+    transition: 0.5s;
+    transition-timing-function: ease-in;
+  }
+
+  #text{
+    font-size:30px;
+    padding-left:10px;
+@import url('https //fonts.googleapis.com/css family=poppins');
+*{
+  font-family: "Catamaran";
+}
+
+body {
+  background-color: red;
+  margin: 20px 20px 20px 20px;
+  font-size:30px;
+}
+.wrapper{
+  align-items:center;
+  align-content:center;
+  justify-content: center;
+  text-align: justify;
+  word-break: break-all;
+  margin: 200px 400px 100px 250px;
+  border: 2px solid black;
+  border-radius: 10px;
+  border-width: thick;
+  border-style:dotted dotted dotted dotted;
+  padding:10px 10px 10px 10px;
+  background: yellow;
+}
+ #new-quote{
+  margin-left: 500px;
+} */
