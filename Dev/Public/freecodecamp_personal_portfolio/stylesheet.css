@@ -31,10 +31,12 @@ header {
 .nav-name {
     color:yellow;
     font-size: 1.75em;
+    overflow: hidden;
 }
 #navbar {
     display: flex;
     height: 80px;
+    overflow: hidden;
 }
 #links {
     display: flex;
@@ -45,14 +47,14 @@ header ul {
     display: flex;
     justify-content: space-around;
     margin: 15px;
-    width: 100%;
+
 }
 li a {
     text-decoration: none;
     font-size: 1.3em;
     color:yellow;
     font-weight: bold;
-    padding: 26px;
+    padding: 15px;
 }
 .nav-link:hover{
     border-bottom:4px solid red;
@@ -189,26 +191,71 @@ footer {
 footer a {
     color:black;
 }
-@media (max-width: 500px) {
-header ul {
-    flex-direction: column;
-    align-items: center;
-    margin: 0px;
-}
-}
-@media (max-width: 760px) {
-li a {
-    padding: 18px;
-}
-}
 
-@media (max-width: 500px) {
-li a {
-    padding: 0px;
-}
 .contactme {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     }
+}
+
+@media only screen and (max-width: 1200px){
+    /*Tablets [601px -> 1200px]*/
+    .nav-name {
+        color:yellow;
+        font-size: 30px;
+        overflow: hidden;
+    }
+    li a {
+        text-decoration: none;
+        font-size: 20px;
+        color:yellow;
+        font-weight: bold;
+        padding: 10px;
+    }
+    #links {
+        display: flex;
+        align-items: center;
+        margin-left: 16px;
+    }
+}
+@media only screen and (max-width: 600px){
+	/*Big smartphones [426px -> 600px]*/
+  .nav-name {
+      color:yellow;
+      overflow: hidden;
+      font-size:20px
+  }
+  li a {
+      text-decoration: none;
+      font-size: 16px;
+      color:yellow;
+      font-weight: bold;
+      padding: 8px;
+  }
+  #links {
+      display: flex;
+      align-items: center;
+      margin-left: 12px;
+  }
+}
+@media only screen and (max-width: 425px){
+	/*Small smartphones [325px -> 425px]*/
+  .nav-name {
+      color:yellow;
+      overflow: hidden;
+      font-size: 10px;
+  }
+  li a {
+      text-decoration: none;
+      font-size: 12px;
+      color:yellow;
+      font-weight: bold;
+      padding: 6px;
+  }
+  #links {
+      display: flex;
+      align-items: center;
+      margin-left: 6px;
+  }
 }
