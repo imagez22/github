@@ -1,131 +1,115 @@
-$(document).ready(function(){
-  var nos = [];
-  var flag = false;
-  var operators = [];
-  var result = 0;
-  var disp = $(".display");
-  var operatorButtons = $(".btnOperator");
-  var numberButtons = $(".btnNumber");
-  var acButton = $(".btnAc");
-  var equalButton = $(".btnEqual");
-  var normalButtons = $(".btnN");
-  var exp = [];
-  var no = "";
-  var ans = null;
-  var precedence = ['*','/','%','+','-'];
-  var flag2 = false;
-  var count = 0;
+$(document).ready(function() {
+	// Declare variables
+	var entry="";
+	var memory=[];
+	var result=0;
+	var operator = /(\+|-|\*|\/|=)/g;
+	var digit = /[0-9]/;
+	var doubleDot = /(\..\.)/;
+	var isDigit, isOperator, isDot, isAC, isBack;
+	var isLastDigit, isLastOperator, isLastDot;
+	isLastDigit=isLastOperator=isLastDot=false;
 
-  numberButtons.on("click",function(){
-    if(flag){
-      updateScreen(exp);
-      flag = false;
-    }
-    var btn = $(this);
-    no += (btn.text());
-    exp[count] = no;
-    console.log(no, count, exp);
-    updateScreen(disp.val() + btn.text());
-    flag2 = true;
-  });
+	// Function: obtain key press
+	$("button").click(function(){
+		entry	= $(this).attr("value");
+		checkEntry();
+		displayCurrent();
+		checkRules();
+		displayHistory();
 
-  operatorButtons.click(function(){
-    console.log("before entering into operatorButton",count);
-    if(flag){
-      updateScreen(exp);
-      flag = false;
-    }
-    if(flag2){
-      count = count +2;
-      flag2 = false;
-    }
-    else
-      count++;
-    console.log("after entering  ount is",count);
-    no = "";
-    var txt = $(this).text() === 'MOD' ? '%' : ($(this).text() === 'ANS' ? ans : $(this).text());
-    updateExp(txt);
-    updateScreen(disp.val() + $(this).text());
-  });
+	})
 
-  acButton.on("click",function(){
-    updateScreen("");
-    no = "";
-    count = 0;
-    exp = [];
-    flag2 = false;
-  });
+// flag the input with the appropriate entry type
+	function checkEntry(){
+		entry.match(digit)===null? isDigit=false : isDigit=true
+		entry.match(operator)===null|entry.match(operator)===undefined? isOperator=false : isOperator=true
+		entry==="."?isDot=true:isDot=false
+		entry==="ac"?isAC=true:isAC=false
+		entry==="back"?isBack=true:isBack=false
+		// console.log(isBack);
 
-  equalButton.click(function(){
-    if(exp.length === 1)
-      return;
-    no = "";
-    for(var i = 0; i < precedence.length; i++){
-      while(exp.indexOf(precedence[i]) >= 0){
-        var pos = exp.indexOf(precedence[i]);
-        if(pos === 0){
-          if(precedence[i] === '+'){
-            exp.splice(0,1);
-            console.log(exp);
-            continue;
-          }
-          else if(precedence[i] === '-'){
-            console.log(exp.splice(0,1) );
-            exp[0] = parseInt(exp[0]) * (-1);
-            console.log(exp);
-            continue;
-          }
-          else if(precedence[i] === '*' || precedence[i] === '/'){
-            console.log("You did something wrong! Reset using AC button.");
-            return;
-          }
-      }
-        var lhs = exp[pos-1]?parseFloat(exp[pos-1]):NaN;
-        var rhs = exp[pos+1]?parseFloat(exp[pos+1]):NaN;
-        if(!lhs || !rhs){
-          return -1;
-        }
-        console.log("ps lhs rhs",pos,lhs,rhs);
-        switch(precedence[i]){
-          case '/':
-            var result = lhs/rhs;
-            break;
-          case '*':
-            var result = lhs*rhs;
-            break;
-          case '+':
-            var result = lhs+rhs;
-            break;
-          case '-':
-            var result = lhs-rhs;
-            break;
-          case '%':
-            var result = lhs % rhs;
-        }
+		if (memory.length>0){
+			memory[memory.length-1].match(digit)===null? isLastDigit=false :  isLastDigit=true
+			memory[memory.length-1].match(operator)===null | memory[memory.length-1].match(operator)===undefined? isLastOperator=false :  isLastOperator=true
+			memory[memory.length-1].match(/(\.)/g) ? isLastDot=true :  isLastDot=false
+		}
+//		console.log(isLastDot);
 
-        console.log("before exp is ",exp);
-        exp.splice(pos-1,3,String(result));
-        console.log("final exp is ",exp);
-      }
-      updateScreen(exp.join(""));
-    }
-    ans = exp[0];
-    flag = true;
-    count = 0;
-    flag2 = false;
-    exp = [];
-  });
+		if(memory[memory.length-1]=="="){
+			memory=[];
+			memory.push(result);
+			}
 
-  function updateScreen(str){
-    disp.val(str);
-  }
+	}
 
-  function updateExp(str){
-    exp.push(str);
-    console.log("exp is ",exp);
-  }
+	// Function: check key press against rules
+	function checkRules(){
+		if (isAC){
+			memory=[];
+			displayHistory();
+			result=0;
+			displayCurrent();
+//			console.log(entry);
+		} else if (isBack){
+			if(memory.length>0){
+				memory.pop();
+				displayHistory();
+				displayCurrent();
+			}
+		} else if (entry=="="){
+			getResult();
+		}	else if (isOperator){
+			if (isLastOperator&&memory.length>1) {memory[memory.length-1]=entry;}
+			else if (memory.length==0&&entry!=="-"){} else {memory.push(entry);}
+		} else if (isDot){
+			if (memory.length==0) {memory.push("0."); }
+			else if (result!=0&&isLastDot){$("#result").text("Wrong Key");}
+			else if (!isLastDot&&isLastDigit) {memory[memory.length-1]+=entry;}
+			else {memory.push(entry);}
+		}
+//		else if (memory[memory.length-1]=="." | memory[memory.length-1] % 1 == 0){console.log("strange");}
+		else {
+			// Assuming isDigit
+//			console.log(isLastDigit);
+			if (memory.length==0) {memory.push(entry);}
+			else if (memory.length==1&&memory[0]=="-"){memory[0]="-"+entry;}
+			else if (isLastDigit) {memory[memory.length-1]+=entry;}
+			else {memory.push(entry); }
+		}
 
-  function clrscr(){
-    disp.val("");
-  }
-});
+	}
+
+	// Function: display current button being pushed
+	function displayCurrent(){
+		if (memory.length>0){
+			$("#result").text(result);
+		}	else {$("#result").text("0");}
+	}
+
+	// Function: display history
+	function displayHistory(){
+		if (memory.length>0&&memory[memory.length-1]=="="){
+				$("#history").text(result);
+				}
+		else if (memory.length>0){
+			$("#history").text(memory.join(""));
+			}
+		else {$("#history").text("0");}
+	}
+
+	// Function: getResult
+	function getResult(){
+//		console.log(memory);
+//		Please keep in mind that the eval() function isn't the most efficient
+// It has vulnerabilities; thus, another method should be used to replace this function
+		result=eval(memory.join(""));
+		if (result%1!==0){
+			result = result.toString();  // this neat little trick will ommit all non-significant trailing zeros after the decimal point
+		}
+		memory.push("=");
+		$("#result").text(result);
+//		$("#history").text(memory.join(""));
+	}
+
+})

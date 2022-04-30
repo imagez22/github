@@ -3,52 +3,65 @@
   <head>
     <meta charset="UTF-8">
     <title>Javascript Calculator</title>
+    <link href='//fonts.googleapis.com/css?family=Bungee' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Orbitron:500,400,700' rel='stylesheet' type='text/css'>
     <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+    <link  href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <div class="mainBody container">
-      <div class="displayPart">
-        <input class="display" disabled/>
+
+
+<div class='container'>
+  <div id='calculator'>
+
+    <!-- TITLE -->
+
+    <div id='title' class='text-center'>
+      <h5><b>Javascript Calculator</b></h5>
+    </div>
+
+    <!-- ENTRY BOX -->
+
+    <div id='entrybox' class='text-right'>
+      <div id='entry'>
+        <p id='result'>0</p>
       </div>
-        <div class="col-xs-12 borderDivs">
-          <div class="col-xs-3 div1"></div>
-          <div class="col-xs-6 div2"></div>
-          <div class="col-xs-3 div3"></div>
-        </div>
-    <div class="buttonsPart">
-      <div class="col-xs-12">
-        <button class="buttons btn btnAc">AC</button>
-        <button class="buttons btn btnOperator">ANS</button>
-        <button class="buttons btn btnOperator btnN">MOD</button>
-        <button class="buttons btn btnOperator btnN">/</button>
-      </div>
-      <div class="col-xs-12">
-        <button class="buttons btn btnNumber btnN">7</button>
-        <button class="buttons btn btnNumber btnN">8</button>
-        <button class="buttons btn btnNumber btnN">9</button>
-        <button class="buttons btn btnOperator btnN">*</button>
-      </div>
-      <div class="col-xs-12">
-        <button class="buttons btn btnNumber btnN">4</button>
-        <button class="buttons btn btnNumber btnN">5</button>
-        <button class="buttons btn btnNumber btnN">6</button>
-        <button class="buttons btn btnOperator btnN">-</button>
-      </div>
-      <div class="col-xs-12">
-        <button class="buttons btn btnNumber btnN">1</button>
-        <button class="buttons btn btnNumber btnN">2</button>
-        <button class="buttons btn btnNumber btnN">3</button>
-        <button class="buttons btn btnOperator btnN">+</button>
-      </div>
-      <div class="col-xs-12">
-        <button class="buttons btn btnNumber btnN">.</button>
-        <button class="buttons btn btnNumber btnN">0</button>
-        <button class="buttons btn btnEqual">=</button>
+      <div id='history'>
+        <p id='log'>0</p>
       </div>
     </div>
+
+    <!-- BUTTONS -->
+
+    <div id='buttons'>
+
+      <button class='red btn-danger' value='ac'>AC</button>
+      <button class='red btn-danger' value='back'>&#8678;</button>
+      <button class="btn-primary" value='/'>&divide;</button>
+      <button class="btn-primary"value='*'>x</button>
+      <button class="btn-info"value='7'>7</button>
+      <button class="btn-info"value='8'>8</button>
+      <button class="btn-info"value='9'>9</button>
+      <button class="btn-primary"value='-'>-</button>
+      <button class="btn-info"value='4'>4</button>
+      <button class="btn-info"value='5'>5</button>
+      <button class="btn-info"value='6'>6</button>
+      <button class="btn-primary" value='+'>+</button>
+      <button class="btn-info"value='1'>1</button>
+      <button class="btn-info"value='2'>2</button>
+      <button class="btn-info"value='3'>3</button>
+      <button class="btn-info"id='zeroButton' value='0'>0</button>
+      <button class="btn-info"value='.'>.</button>
+      <button class="btn-primary"id='equalButton' value='='>=</button>
+
     </div>
+    <!-- end buttons -->
+  </div>
+  <!-- end calculator -->
+</div>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<footer><a>Free Code Camp 2021</a></footer>
     <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
     <script src="js/index.js"></script>
   </body>

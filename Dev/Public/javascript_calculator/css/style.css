@@ -1,111 +1,146 @@
-body{
-  padding: 10px;
-  font-family: 'Montserrat', sans-serif;
-  background: #eee;
+/* Credit: some CSS Codes are adapted from Justin Woodward's (https://codepen.io/freeCodeCamp/full/rLJZrA) */
+
+body {
+  font-family: 'Bungee';
+	background-color:lime;
+	background-size: 100%;
 }
 
-.mainBody{
-  background: #e6cc67;
+#calculator {
+  height: 440px;
   width: 300px;
-  height: 480px;
-  padding: 0;
-  margin: 3% auto;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  border: 2px solid #908b85;
   border-radius: 20px;
-  box-sizing: content-box;
-  box-shadow: 0 15px 15px rgba(0,0,0,.3);
+  box-shadow: 7px 10px 34px 1px rgba(0, 0, 0, 0.68), inset -1px -6px 12px 0.1px #89847e;
 }
 
-.displayPart{
-  padding: 30px 20px;
-  border-radius: 10px 10px 0 0;
-  background: #363535;
-  border-radius: 20px 20px 0 0;
+#title {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-.display{
-  background: #444;
-  height: 60px;
-  width: 100%;
-  border: 0;
-  text-align: right;
-  line-height: 60px;
+#entrybox {
+  width: 85%;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #b4b39d;
+  border-radius: 6px;
+  background-color: yellow;
+	overflow: auto;
+}
+
+#entry {
+  margin-right: 10px;
+  font-size: 35px;
+}
+
+#buttons {
+  font-size: 16px;
+  font-weight: bold;
   color: #fff;
-  font-size: 25px;
-  letter-spacing: 2.8px;
-  padding: 0 12px;
-  box-shadow: inset 0px 0px 2px 2px rgba(0,0,0,.3);
+  position: absolute;
+  display: inline-block;
+  width: 280px;
+  height: auto;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+buttons:hover{
+  background-color:yellow;
 }
 
-.borderDivs{
-  padding: 0;
-}
-
-.borderDivs{
-  height: 8px;
-  background-color: #444;
-}
-
-.btnAns, .btn{
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.buttonsPart{
-  padding: 40px 0 0px 0;
-}
-
-.buttons{
-  line-height: 1.5;
-  color: #fff;
-  background: #444;
-  font-weight: 900;
+button {
+  border-radius: 8px;
+  border: none;
+  background-color: #3a3a3a;
+  margin: 0 4px 10px 8px;
+  height: 40px;
   width: 50px;
-  margin: 7px 7px;
-  display: inline;
-  font-size: 13px;
-  border-radius: 4px;
-  border: solid 2px #444;
-  box-shadow: 0 0 1px 1px rgba(0,0,0,.3);
-  outline: none;
+  box-shadow: 0px 3px 0px 0px #222121, inset -1px -3px 10px 1px #515151;
+	font-weight: bold;
 }
 
-.btnEqual{
-  width: 118px;
+.btn-info{
+	color: black;
 }
 
-.buttons:focus,
-.buttons:active,
-.buttons:hover {
-  color: #fff;
+.btn-info:hover{
+	color: yellow;
+	font-size:110%;
+}
+
+button:active {
+  transform: translate(0px, 3px);
+  box-shadow: none;
+}
+
+.row {
+  margin-top: 20px
+}
+
+#topAdjust {
+  margin-top: -52px;
+}
+
+#equalButton {
+  position: absolute;
+  margin-left: 12px;
+  margin-top: -50px;
+  height: 90px;
+}
+
+#zeroButton {
+  width: 117px;
+}
+
+.red {
+  font-size: 14px;
+  background-color: #a72d45;
+  box-shadow: 0px 3px 0px 0px #671c2a;
+}
+
+footer {
+  font-family: 'Arial Black';
+	color: white;
+  position: relative;
+  font-size: 16px;
+  font-weight: normal;
+  margin-top: 20px;
+	margin-left: auto;
+	margin-right:auto;
+  width: 300px;
+  height: 40px;
+	text-align: center;
+}
+
+button,
+button:hover,
+button:active,
+button:visited {
+  text-decoration: none !important;
   outline: none !important;
 }
 
-:focus {outline:none;}
-
-::-moz-focus-inner {border:0;}
-
-.buttons:active{
- color: #fff;
- outline: none;
- box-shadow: none;
+a,
+a:hover,
+a:active,
+a:visited {
+  color: #922031;
+  text-decoration: none !important;
+  outline: none !important;
 }
 
-::-webkit-input-placeholder {
-   opacity: .2;
-}
-
-:-moz-placeholder { /* Firefox 18- */
-   opacity: .2;
-}
-
-::-moz-placeholder {  /* Firefox 19+ */
-   opacity: .2;
-}
-
-:-ms-input-placeholder {
-   opacity: .2;
-}
-
-.btnMult{
-  font-size: 15px;
+#history {
+  /*transform: translate(-13px, -17px);*/
+  position: relative;
+  height: 10px;
+  bottom: 17px;
+  margin-right: 14px;
+  color: #8b8b7b;
+  font-size: 12px;
 }
