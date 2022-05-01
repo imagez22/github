@@ -1,15 +1,14 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="stylesheet.css">
-      <link rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-      crossorigin="anonymous">
-    <title>Portfolio Page</title>
-  </head>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <title>Portfolio Page</title>
+</head>
+
 <body>
   <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
   <header id="header">
@@ -17,13 +16,15 @@
       <div class="nav-name" id="my-name">
         <h1>Akli Joshua Eric Yao</h1>
       </div>
-      <div id="links">
-        <ul>
-          <li><a class="nav-link" href="#welcome-section">Home</a></li>
-          <li><a class="nav-link" href="#aboutme">About Me</a></li>
-          <li><a class="nav-link" href="#projects">Portfolio</a></li>
-          <li><a class="nav-link" href="#contact">Contact Me</a></li>
-        </ul>
+      <div class="topnav" id="myTopnav">
+        <a href="#welcome-section" class="active">Home</a>
+        <a href="#aboutme">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
       </div>
     </nav>
   </header>
@@ -74,7 +75,7 @@
     </ul>
   </div>
   <footer style="font-size:20px;">
-    <p>**This is just a portfolio to gain certification for responsive web development.. All the projects and contact details given are real..</p>
+    <p style="font-size:30px">**This is just a portfolio to gain certification for responsive web development.. All the projects and contact details given are real..</p>
     <p>&copy; Created for <a href="https://www.freecodecamp.com/" target="_blank">FreeCodeCamp</a></p>
   </footer>
 </body>
